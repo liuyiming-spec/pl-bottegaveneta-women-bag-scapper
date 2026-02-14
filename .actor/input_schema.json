@@ -1,0 +1,48 @@
+{
+  "title": "Bottega Veneta Women Bags Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "Women bags listing URLs. Keep default unless you need another locale page.",
+      "editor": "requestListSources",
+      "prefill": [
+        {
+          "url": "https://www.bottegaveneta.com/en-us/women-collection-us/women-bags"
+        }
+      ]
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max requests per crawl",
+      "type": "integer",
+      "description": "Safety cap for crawl volume.",
+      "default": 20,
+      "minimum": 1
+    },
+    "maxConcurrency": {
+      "title": "Max concurrency",
+      "type": "integer",
+      "description": "Number of parallel browser pages.",
+      "default": 8,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "requestTimeoutSecs": {
+      "title": "Request timeout (seconds)",
+      "type": "integer",
+      "default": 120,
+      "minimum": 30,
+      "maximum": 300,
+      "description": "Max time allowed for one request before retrying."
+    },
+    "proxyConfiguration": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Use Apify Proxy. For best stability on e-commerce websites, use residential proxies if available.",
+      "editor": "proxy"
+    }
+  },
+  "required": []
+}
