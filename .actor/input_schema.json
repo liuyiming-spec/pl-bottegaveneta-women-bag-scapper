@@ -34,7 +34,8 @@
       "type": "integer",
       "default": 120,
       "minimum": 30,
-      "maximum": 300
+      "maximum": 300,
+      "description": "Max time allowed for one request before retrying."
     },
     "proxyConfiguration": {
       "title": "Proxy configuration",
